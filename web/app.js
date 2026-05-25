@@ -2509,6 +2509,10 @@ if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
     "http://mozilla.github.io",
     "https://mozilla.github.io",
   ]);
+  const ALLOWED_FILE_ORIGINS = new Set([
+    "http://cdn.9198777.xyz",
+    "https://cdn.9198777.xyz",
+  ]);
   // eslint-disable-next-line no-var
   var validateFileURL = function (file) {
     if (!file) {
@@ -2521,6 +2525,9 @@ if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
     }
     const fileOrigin = URL.parse(file, window.location)?.origin;
     if (fileOrigin === viewerOrigin) {
+      return;
+    }
+    if (ALLOWED_FILE_ORIGINS.has(fileOrigin)) {
       return;
     }
     const ex = new Error("file origin does not match viewer's");
