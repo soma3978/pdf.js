@@ -2512,6 +2512,10 @@ if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
   const ALLOWED_FILE_ORIGINS = new Set([
     "http://cdn.9198777.xyz",
     "https://cdn.9198777.xyz",
+    "https://library.9198777.xyz",
+    "https://cds.9198777.xyz",
+    "https://cdnsss9198.blob.core.windows.net",
+    "https://newlibrary.9198777.xyz",
   ]);
   // eslint-disable-next-line no-var
   var validateFileURL = function (file) {
