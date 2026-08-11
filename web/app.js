@@ -2516,6 +2516,7 @@ if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
     "https://cds.9198777.xyz",
     "https://cdnsss9198.blob.core.windows.net",
     "https://newlibrary.9198777.xyz",
+    "https://xs718484.xsrv.jp",
   ]);
   // eslint-disable-next-line no-var
   var validateFileURL = function (file) {
